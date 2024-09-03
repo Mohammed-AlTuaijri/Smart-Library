@@ -14,8 +14,8 @@ from langchain.agents import AgentExecutor
 import chromadb
 from app.Books import books_crud
 
-client = chromadb.PersistentClient(path="/Users/maltuaijri001/Desktop/chromadb")
-books_collection = client.get_or_create_collection(name="improved_books2.0")
+client = chromadb.PersistentClient(path="b")
+books_collection = client.get_or_create_collection(name="improved_books")
 
 llm = ChatOllama(model="llama3.1", temperature=0)
 
