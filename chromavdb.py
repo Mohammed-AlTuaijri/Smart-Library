@@ -2,14 +2,14 @@ import pandas as pd
 import chromadb
 import time
 
-df = pd.read_csv('/Users/maltuaijri001/Desktop/new_books_cleaned4.0.csv')
+df = pd.read_csv('')
 # print(df)
 columns = ['title', 'categories', 'authors', 'description']
 df.dropna(subset=columns, inplace=True)
 limit = df.shape[0]
 
 
-client = chromadb.PersistentClient(path="/Users/maltuaijri001/Desktop/Smart-Library/chromadb")
+client = chromadb.PersistentClient(path="")
 books_collection = client.get_or_create_collection(name="books")
 x = 0
 i = 100
