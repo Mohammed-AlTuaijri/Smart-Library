@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from app.common.config.database import SessionLocal
 
 SQLALCHEMY_DATABASE_URL = (
-    "postgresql://postgres:48204820Qp$@localhost:5432/smart_library_database"
+    ""
 )
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -14,7 +14,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 def add_authors():
-    df = pd.read_csv('/Users/maltuaijri001/Desktop/new_books_cleaned4.0.csv')
+    df = pd.read_csv('')
     columns = ['title', 'categories', 'authors', 'description']
     df.dropna(subset=columns, inplace=True)
     
@@ -36,7 +36,7 @@ def add_authors():
 # add_authors()
 
 def add_books():
-    df = pd.read_csv('/Users/maltuaijri001/Desktop/new_books_cleaned4.0.csv')
+    df = pd.read_csv('')
     print(df)
     columns = ['title', 'categories', 'authors', 'description']
     df.dropna(subset=columns, inplace=True)
