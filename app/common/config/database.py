@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 SQLALCHEMY_DATABASE_URL = (
-    "postgresql://postgres:48204820Qp$@localhost:5432/smart_library_database"
+    ""
 )
 
 
